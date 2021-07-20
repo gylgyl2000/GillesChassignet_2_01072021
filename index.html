@@ -9,39 +9,33 @@
     </head>
     <body>
 
-        <!-- Début de la page -->
-        <div class="page-wrapper">
+        <!-- Page -->
+        <div id="page" class="page-wrapper">
 
-            <!-- Début de la barre de navigation -->
-            <nav id="header" class="header">
-                <ul class="header-nav">
-                    <li id="logo">
+            <!-- En-tête -->
+            <header>
+                <div class="container">
+                    <!-- Logo -->
+                    <div id="logo">
                         <a href="index.html" title="Retour à l'accueil">
                             <img src="img/logo/Reservia@3x.png" alt="Reservia"/>
                         </a>
-                    </li>
-                    <li id="heb-big">
-                        <a href="#hebergements" title="Hébergements">Hébergements</a>
-                    </li>
-                    <li id="act-big">
-                        <a href="#activites" title="Activités">Activités</a>
-                    </li>
-                    <li id="inscription">
+                    </div>
+                    <!-- Inscription -->
+                    <div id="inscription">
                         <a href="#" title="S'inscrire">S'inscrire</a>
-                    </li>
-                </ul>
-                <ul id="tabnav" class="header-side">
-                    <li id="heb-small">
-                        <a href="#hebergements" title="Hébergements">Hébergements</a>
-                    </li>
-                    <li id="act-small">
-                        <a href="#activites" title="Activités">Activités</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Fin de la barre de navigation -->
-
-            <!-- Début du corps de page -->
+                    </div>
+                </div>
+                <!-- Barre de navigation -->
+                <nav>
+                    <input type="radio" name="onglet" class="onglet ongletHeb" id="onglet-a" checked="" onclick="location.href='#hebergement';">
+                    <label for="onglet-a">Hébergements</label>
+                    <input type="radio" name="onglet" class="onglet ongletAct" id="onglet-b" onclick="location.href='#activites';">
+                    <label for="onglet-b">Activités</label>
+                </nav>
+            </header>
+            
+            <!-- Corps de la page -->
             <main>
 
                 <!-- Début de la barre de recherche -->
@@ -75,7 +69,7 @@
                 <!-- Début de la section "Les plus populaires" -->
                 <section class="populaire">
                     <div class="populaires">
-                        <p class="populaires-titre">Les plus polpulaires</p>
+                        <h1>Les plus populaires</h1>
 
                         <!-- 1ère sélection populaire -->
                         <div class="card">
@@ -148,8 +142,52 @@
                 </div>
                 <!-- Fin de la section "Les plus populaires" -->
 
-                <section class="hebergement" id="hebergement"></section>
-                <section class="activites" id="activites"></section>
+                <section class="hebergement" id="hebergement">
+                    <h1 id="hebergement">Hébergements à Marseille</h1>
+                    <div>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+    
+                    </div>
+                </section>
+                <section class="activites" id="activites">
+                    <h1 id="activites">Activités à Marseille</h1>
+                    <div>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+    
+                    </div>
+                </section>
             </main>
             <!-- fin du corps de page -->
 
