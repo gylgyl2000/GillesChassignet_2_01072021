@@ -57,18 +57,24 @@
                         </form>
                     </div>
                 </section>
-                <!-- Fin de la barre de recherche -->
 
-                <!-- Début des filtres de recherche -->
-                <section class="filtre">
+                <!-- Filtres de recherche -->
+                <section id="filtres">
                     <div class="filtres">
-                        <p class="filtres-titre">Filtres</p>
-                        <a href="#" class="btn-filtres">Économique</a>
-                        <a href="#" class="btn-filtres">Familial</a>
-                        <a href="#" class="btn-filtres">Romantique</a>
-                        <a href="#" class="btn-filtres">Animaux autorisés</a>
+                        <h2 class="filtres-titre">Filtres</h2>
+                        <input type="checkbox" id="eco" name="eco" class="check eco" value="Economique" checked="">
+                        <label for="eco"><i class="fas fa-money-bill-wave"></i>Économique</label>
+                        <input type="checkbox" id="fam" name="fam" class="check fam" value="Familial" checked="">
+                        <label for="fam"><i class="fas fa-child"></i>Familial</label>
+                        <input type="checkbox" id="rom" name="rom" class="check rom" value="Romantique" checked="">
+                        <label for="rom"><i class="fas fa-heart"></i>Romantique</label>
+                        <input type="checkbox" id="ani" name="ani" class="check ani" value="Animaux" checked="">
+                        <label for="ani"><i class="fas fa-dog"></i>Animaux autorisés</label>
                     </div>
-                    <div class="result-filtres">Plus de 500 logements sont disponibles</div>
+                    <div class="result-filtres">
+                        <i class="fas fa-info"></i>
+                        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                    </div>
                 </section>
                 <!-- Fin des filtres de recherche -->
 
