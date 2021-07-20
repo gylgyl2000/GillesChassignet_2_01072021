@@ -5,6 +5,7 @@
         <meta name="description" content="Trouvez des hébergements et des activités dans la ville de votre choix">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Reservia</title>
+        <script src="https://kit.fontawesome.com/5ae5fdf9eb.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -46,10 +47,15 @@
                     <p class="hero-text">
                         En plein centre ville ou en pleine nature
                     </p>
-                    <form action="#" class="search-input">
-                        <input type="text" placeholder="Marseille, France">
-                        <button class="submit"></button>
-                    </form>
+                    <div class="search-container">
+                        <form action="#" class="search-input">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" placeholder="Marseille, France" name="search">
+                            <button type="submit" class="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
                 </section>
                 <!-- Fin de la barre de recherche -->
 

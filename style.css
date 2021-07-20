@@ -142,55 +142,49 @@ input[type="radio"].onglet.ongletAct:checked + label {
     color: var(--color-blue);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.header-side {
-    width: 100%;
-    height: 6vh;
-}
-
-.header-side {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-}
-
-#tabnav li, #tabnav a {
-    display: block;
-    width: 100%;
-    height: 4vh;
-}
-
-#heb-small, #act-small {
-    padding-top: 1vh;
-}
-
-#tabnav a:hover, #tabnav a:focus, #tabnav a:active {
-    border-bottom: 3px solid var(--color-blue);
-    color: var(--color-blue);
-}
-
-
-
-
-#heb-big, #act-big {
-    display: none;
-}
-
+/*************************/
+/*   Corps de la page    */
+/*************************/
 
 main {
     padding: 18vh 7vw 0 7vw;
+}
+
+/*************************/
+/*  Barre de recherche   */
+/*************************/
+
+.hero-text {
+    margin-top: -10px;
+    padding: 10px 0;
+}
+
+.search-container {
+    width: 100%;
+}
+
+.search-input {
+    display: flex;
+    height: 5vh;
+}
+
+.search-input input {
+    flex-grow: 1;
+    font-weight: 800;
+    margin: 0 -39px 0 29px;
+    font-size: 16px;
+    color: black;
+    border: none;
+}
+
+.search-input .fa-map-marker-alt {
+    margin: 9px 5px 0 20px;
+}
+
+.submit {
+    width: 34px;
+    background-color: var(--color-blue);
+    color: white;
+    border: none;
+    border-radius: 10px;
 }
