@@ -3,41 +3,200 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Trouvez des hébergements et des activités dans la ville de votre choix">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Reservia</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="page-wrapper">
+
+        <!-- Page -->
+        <div id="page" class="page-wrapper">
+
+            <!-- En-tête -->
             <header>
-                <h1>
-                    <a href="index.html">Reservia</a>
-                </h1>
-                <nav class="header">
-                    <ul class="header-nav">
-                        <li>
-                            <a href="#hebergements" title="Hébergements">Hébergements</a>
-                        </li>
-                        <li>
-                            <a href="#activites" title="Activités">Activités</a>
-                        </li>
-                    </ul>
-                    <ul class="header-side">
-                        <li>
-                            <a href="#" title="S'inscrire">S'inscrire</a>
-                        </li>
-                        <li>
-                            <a href="#" title="Se connecter">Se connecter</a>
-                        </li>
-                    </ul>
+                <div class="container">
+                    <!-- Logo -->
+                    <div id="logo">
+                        <a href="index.html" title="Retour à l'accueil">
+                            <img src="img/logo/Reservia@3x.png" alt="Reservia"/>
+                        </a>
+                    </div>
+                    <!-- Inscription -->
+                    <div id="inscription">
+                        <a href="#" title="S'inscrire">S'inscrire</a>
+                    </div>
+                </div>
+                <!-- Barre de navigation -->
+                <nav>
+                    <input type="radio" name="onglet" class="onglet ongletHeb" id="onglet-a" checked="" onclick="location.href='#hebergement';">
+                    <label for="onglet-a">Hébergements</label>
+                    <input type="radio" name="onglet" class="onglet ongletAct" id="onglet-b" onclick="location.href='#activites';">
+                    <label for="onglet-b">Activités</label>
                 </nav>
             </header>
+            
+            <!-- Corps de la page -->
             <main>
-                <section class="recherche"></section>
-                <section class="filtre"></section>
-                <section class="hebergement" id="hebergement"></section>
-                <section class="activites" id="activites"></section>
+
+                <!-- Début de la barre de recherche -->
+                <section class="recherche">
+                    <div class="hero-title">
+                        <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+                    </div>
+                    <p class="hero-text">
+                        En plein centre ville ou en pleine nature
+                    </p>
+                    <form action="#" class="search-input">
+                        <input type="text" placeholder="Marseille, France">
+                        <button class="submit"></button>
+                    </form>
+                </section>
+                <!-- Fin de la barre de recherche -->
+
+                <!-- Début des filtres de recherche -->
+                <section class="filtre">
+                    <div class="filtres">
+                        <p class="filtres-titre">Filtres</p>
+                        <a href="#" class="btn-filtres">Économique</a>
+                        <a href="#" class="btn-filtres">Familial</a>
+                        <a href="#" class="btn-filtres">Romantique</a>
+                        <a href="#" class="btn-filtres">Animaux autorisés</a>
+                    </div>
+                    <div class="result-filtres">Plus de 500 logements sont disponibles</div>
+                </section>
+                <!-- Fin des filtres de recherche -->
+
+                <!-- Début de la section "Les plus populaires" -->
+                <section class="populaire">
+                    <div class="populaires">
+                        <h1>Les plus populaires</h1>
+
+                        <!-- 1ère sélection populaire -->
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-img">
+                                    <img src="" alt="" class="img">
+                                </div>
+                                <div class="col-text">
+                                    <div class="card-body">
+                                        <h5 class="card-title"></h5>
+                                        <p class="card-text"></p>
+                                        <p class="likes"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2nde sélection populaire -->
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-img">
+                                    <img src="" alt="" class="img">
+                                </div>
+                                <div class="col-text">
+                                    <div class="card-body">
+                                        <h5 class="card-title"></h5>
+                                        <p class="card-text"></p>
+                                        <p class="likes"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3ème sélection populaire -->
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-img">
+                                    <img src="" alt="" class="img">
+                                </div>
+                                <div class="col-text">
+                                    <div class="card-body">
+                                        <h5 class="card-title"></h5>
+                                        <p class="card-text"></p>
+                                        <p class="likes"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+                    <p class="long">0</p>
+
+                </div>
+                <!-- Fin de la section "Les plus populaires" -->
+
+                <section class="hebergement" id="hebergement">
+                    <h1 id="hebergement">Hébergements à Marseille</h1>
+                    <div>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+    
+                    </div>
+                </section>
+                <section class="activites" id="activites">
+                    <h1 id="activites">Activités à Marseille</h1>
+                    <div>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+                        <p class="long">0</p>
+    
+                    </div>
+                </section>
             </main>
+            <!-- fin du corps de page -->
+
+            <!-- Début du pied de page -->
             <footer class="footer"></footer>
+            <!-- Fin du pied de page -->
+
         </div>
+        <!-- Fin de la page -->
+
     </body>
 </html>
