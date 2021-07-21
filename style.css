@@ -17,12 +17,6 @@ body {
     background-color: white;
 }
 
-h2 {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.1;
-}
-
 h1 {
     font-size: 24px;
     font-weight: 700;
@@ -34,6 +28,18 @@ h1[id]:before {
     height:18vh;
     margin-top:-18vh;
     visibility:hidden
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 1.1;
+
 }
 
 ul {
@@ -262,4 +268,84 @@ input[type="checkbox"].check:checked + label {
     text-align: center;
     margin-right: 10px;
     font-size: 14px;
+}
+
+/*************************/
+/*   Section "Les plus   */
+/*     populaires"       */
+/*************************/
+
+#populaire {
+    margin: 0 -4vw 0 -7vw;
+    padding: 20px 0;
+    background-color: var(--color-gray);
+}
+
+.populaires {
+    margin: 0 4vw 0 7vw;
+}
+
+.populaires h1::after {
+    content:url(img/chart-line-solid.svg);
+    position: absolute;
+    min-width: 20px;
+    padding: 11px;
+    color: #000000;
+    font-size: 14px;
+    right: 5px;
+}
+
+.bleue {
+    color: var(--color-blue);
+}
+
+.grise {
+    color: var(--color-gray);
+}
+
+.card {
+    display: flex;
+    height: 17vh;
+    box-shadow: 0 4px 8px 0 #ABABAB;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 12px;
+}
+
+.col-img {
+    padding: 4px;
+    width: 16vh;
+    height: 16vh;
+}
+
+.col-img img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    border-radius: 18px 0 0 18px;
+}
+
+.col-text {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 12px 12px 0 12px;
+}
+
+.col-text h3 {
+    margin: 0px;
+    height: 5vh;
+}
+
+.col-text p {
+    font-size: 12px;
+    margin: 0px;
+}
+
+.card-text {
+    height: 7vh;
+}
+
+.rating {
+    height: 2vh;
 }
