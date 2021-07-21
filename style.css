@@ -63,6 +63,11 @@ a {
     color: inherit;
 }
 
+section:target {
+    padding-top: 20vh; 
+    margin-top: -20vh; 
+}
+
 .container {
     display: flex;
 }
@@ -417,4 +422,47 @@ input[type="checkbox"].check:checked + label {
 
 .afficherPlus h2 {
     padding: 20px 0;
+}
+
+/*************************/
+/*       Section         */
+/*     "Activités"       */
+/*************************/
+
+.activites a:hover {
+    color: var(--color-blue);
+}
+
+.activites .card {
+    display: flex;
+    flex-direction: column;
+    height: 27vh;
+    box-shadow: 0 4px 8px 0 #ABABAB;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+.activites .col-img {
+    width: 100%;
+    height: 20vh;
+}
+
+.activites .col-img img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.activites .col-text {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 12px 12px 0 12px;
+}
+
+.activites .col-text h4 {
+    margin: 0px;
+    height: 3vh;
 }
