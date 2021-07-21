@@ -121,7 +121,11 @@ header .container div {
 /*      Navigation       */
 /*************************/
 
-nav {
+#desktop-nav {
+    display: none;
+}
+
+#mobile-nav {
     display: flex;
 }
 
@@ -138,7 +142,6 @@ input[type="radio"].onglet {
 input[type="radio"].onglet + label {
     padding: 0.5rem 1rem;
     transition: all 0.5s ease-in-out;
-
 }
 
 input[type="radio"].onglet.ongletHeb:hover + label {
@@ -194,7 +197,7 @@ main {
 .search-input input {
     flex-grow: 1;
     font-weight: 800;
-    margin: 0 -39px 0 29px;
+    margin: 0 -37px 0 29px;
     font-size: 16px;
     color: black;
     border: none;
@@ -210,6 +213,7 @@ main {
     color: white;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /*************************/
@@ -492,3 +496,70 @@ footer a:hover {
     color: var(--color-blue);
     font-weight: bold;
 }
+
+/***** MEDIA QUERIES *****/
+
+@media (min-width: 768px) {
+    header {
+        padding-bottom: 2vh;
+    }
+
+    header .container {
+        justify-content: space-between;
+        padding: 0;
+        height: 10vh;
+    }
+    
+    header .container div {
+        width: auto;
+    }
+
+    #logo {
+        flex-grow: 1;
+        padding-top: 5vh;
+    }
+
+    #logo img {
+        width: 8vw;
+        padding-left: 5vw;
+    }
+
+    #desktop-nav {
+        display: flex;
+        flex-direction: row;
+        height: 10vh;
+    }
+    
+    #mobile-nav {
+        display: none;
+    }
+
+    input[type="radio"].onglet + label {
+        padding: 5vh 0 0.6vh 0;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    input[type="radio"].onglet.ongletHeb:hover + label,
+    input[type="radio"].onglet.ongletHeb:checked + label,
+    input[type="radio"].onglet.ongletAct:hover + label,
+    input[type="radio"].onglet.ongletAct:checked + label {
+        border-top: 3px solid var(--color-blue);
+        border-bottom: none;
+    }
+
+    nav label {
+        width: 12vw;
+        border-top: 3px solid transparent;
+        line-height: 3;
+    }
+
+    #inscription {
+        width: 0;
+        margin-bottom: 1vh;
+        padding-right: 10vw;
+        padding-left: 2vw;
+        line-height: 1.1;
+    }
+
+}
+

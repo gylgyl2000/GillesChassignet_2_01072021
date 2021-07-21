@@ -22,17 +22,24 @@
                             <img src="img/logo/Reservia@3x.png" alt="Reservia"/>
                         </a>
                     </div>
+                    <!-- Barre de navigation desktop-->
+                    <nav id="desktop-nav">
+                        <input type="radio" name="onglet" class="onglet ongletHeb" id="onglet-a" checked="" onclick="location.href='#hebergement';">
+                        <label for="onglet-a">Hébergements</label>
+                        <input type="radio" name="onglet" class="onglet ongletAct" id="onglet-b" onclick="location.href='#activite';">
+                        <label for="onglet-b">Activités</label>
+                    </nav>
                     <!-- Inscription -->
                     <div id="inscription">
                         <a href="#" title="S'inscrire">S'inscrire</a>
                     </div>
                 </div>
-                <!-- Barre de navigation -->
-                <nav>
-                    <input type="radio" name="onglet" class="onglet ongletHeb" id="onglet-a" checked="" onclick="location.href='#hebergement';">
-                    <label for="onglet-a">Hébergements</label>
-                    <input type="radio" name="onglet" class="onglet ongletAct" id="onglet-b" onclick="location.href='#activite';">
-                    <label for="onglet-b">Activités</label>
+                <!-- Barre de navigation mobile-->
+                <nav id="mobile-nav">
+                    <input type="radio" name="onglet" class="onglet ongletHeb" id="onglet-c" checked="" onclick="location.href='#hebergement';">
+                    <label for="onglet-c">Hébergements</label>
+                    <input type="radio" name="onglet" class="onglet ongletAct" id="onglet-d" onclick="location.href='#activite';">
+                    <label for="onglet-d">Activités</label>
                 </nav>
             </header>
             
@@ -62,13 +69,13 @@
                 <section id="filtres">
                     <div class="filtres">
                         <h2 class="filtres-titre">Filtres</h2>
-                        <input type="checkbox" id="eco" name="eco" class="check eco" value="Economique" checked="">
+                        <input type="checkbox" id="eco" name="eco" class="check eco" value="Economique">
                         <label for="eco"><i class="fas fa-money-bill-wave"></i>Économique</label>
-                        <input type="checkbox" id="fam" name="fam" class="check fam" value="Familial" checked="">
+                        <input type="checkbox" id="fam" name="fam" class="check fam" value="Familial">
                         <label for="fam"><i class="fas fa-child"></i>Familial</label>
-                        <input type="checkbox" id="rom" name="rom" class="check rom" value="Romantique" checked="">
+                        <input type="checkbox" id="rom" name="rom" class="check rom" value="Romantique">
                         <label for="rom"><i class="fas fa-heart"></i>Romantique</label>
-                        <input type="checkbox" id="ani" name="ani" class="check ani" value="Animaux" checked="">
+                        <input type="checkbox" id="ani" name="ani" class="check ani" value="Animaux">
                         <label for="ani"><i class="fas fa-dog"></i>Animaux autorisés</label>
                     </div>
                     <div class="result-filtres">
