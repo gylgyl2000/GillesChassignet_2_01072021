@@ -192,6 +192,8 @@ main {
 .search-input {
     display: flex;
     height: 5vh;
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
 }
 
 .search-input input {
@@ -204,7 +206,9 @@ main {
 }
 
 .search-input .fa-map-marker-alt {
-    margin: 9px 5px 0 20px;
+    padding: 8px 12px;
+    background-color: var(--color-gray);
+    border-radius: 8px 0 0 8px;
 }
 
 .submit {
@@ -561,5 +565,55 @@ footer a:hover {
         line-height: 1.1;
     }
 
+    main {
+        padding: 12vh 5vw 0 5vw;
+    }
+
+    .recherche {
+        line-height: 1;
+    }
+
+    .search-container {
+        width: 30%;
+    }
+
+    .fa-search::before {
+        content: " Rechercher ";
+    }
+
+    .submit {
+        width: auto;
+        border-radius: 0 10px 10px 0;
+        font-size: 14px;
+        padding: 0 12px;
+    }
+
+    .search-input .fa-map-marker-alt {
+        padding: 14px 16px 0 16px;
+        background-color: var(--color-gray);
+        border-radius: 10px 0 0 10px;
+    }
+
+    .filtres {
+        padding-top: 4vh;
+        align-items: baseline;
+    }
+
+    .filtres-titre {
+        width: 9%;
+    }
+
+    input[type="checkbox"].check + label {
+        margin-right: 30px;
+    }
+
+    .fas.fa-info {
+        padding: 5px 7px 8px 7px;
+    }
+
+    .result-filtres p {
+        margin-top: 2px;
+        line-height: 1.8;
+    }
 }
 
