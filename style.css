@@ -51,7 +51,6 @@ h3 {
 h4 {
     font-size: 16px;
     line-height: 1.1;
-
 }
 
 ul {
@@ -63,7 +62,7 @@ a {
     color: inherit;
 }
 
-section:target {
+span:target {
     padding-top: 20vh; 
     margin-top: -20vh; 
 }
@@ -314,7 +313,11 @@ input[type="checkbox"].check:checked + label {
     color: var(--color-blue);
 }
 
-.populaires h1::after {
+#populaire h1 {
+    margin-left: 10vw;
+}
+
+#populaire h1::after {
     content:url(img/chart-line-solid.svg);
     position: absolute;
     min-width: 20px;
@@ -428,14 +431,23 @@ input[type="checkbox"].check:checked + label {
     height: 2vh;
 }
 
-.afficherPlus h2 {
+.afficherPlus h3 {
     padding: 20px 0;
+}
+
+.afficherPlus a:hover {
+    color: var(--color-blue);
 }
 
 /*************************/
 /*       Section         */
 /*     "Activités"       */
 /*************************/
+
+.activite {
+    padding-top: 2vh;
+}
+
 
 .activites a:hover {
     color: var(--color-blue);
@@ -503,7 +515,7 @@ footer a:hover {
 
 /***** MEDIA QUERIES *****/
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     header {
         padding-bottom: 2vh;
     }
@@ -538,23 +550,43 @@ footer a:hover {
         display: none;
     }
 
-    input[type="radio"].onglet + label {
+    input[type="radio"].onglet-a {
+        display: none;
+    }
+
+    input[type="radio"].onglet-a + label {
         padding: 5vh 0 0.6vh 0;
         transition: all 0.5s ease-in-out;
     }
     
-    input[type="radio"].onglet.ongletHeb:hover + label,
-    input[type="radio"].onglet.ongletHeb:checked + label,
-    input[type="radio"].onglet.ongletAct:hover + label,
-    input[type="radio"].onglet.ongletAct:checked + label {
+    input[type="radio"].onglet-a.ongletHeb-a:hover + label {
         border-top: 3px solid var(--color-blue);
-        border-bottom: none;
+        font-weight: 600;
+        color: var(--color-blue);
+    }
+
+    input[type="radio"].onglet-a.ongletHeb-a:checked + label {
+        border-top: 3px solid var(--color-blue);
+        font-weight: 600;
+        color: var(--color-blue);
+    }
+
+    input[type="radio"].onglet-a.ongletAct-a:hover + label {
+        border-top: 3px solid var(--color-blue);
+        font-weight: 600;
+        color: var(--color-blue);
+    }
+
+    input[type="radio"].onglet-a.ongletAct-a:checked + label {
+        border-top: 3px solid var(--color-blue);
+        font-weight: 600;
+        color: var(--color-blue);
     }
 
     nav label {
         width: 12vw;
         border-top: 3px solid transparent;
-        line-height: 3;
+        line-height: 2;
     }
 
     #inscription {
@@ -562,11 +594,16 @@ footer a:hover {
         margin-bottom: 1vh;
         padding-right: 10vw;
         padding-left: 2vw;
-        line-height: 1.1;
+        line-height: 2;
     }
 
     main {
-        padding: 12vh 5vw 0 5vw;
+        padding: 12vh 3vw 0 3vw;
+    }
+
+    span:target {
+        padding-top: 12vh; 
+        margin-top: -12vh; 
     }
 
     .recherche {
@@ -615,5 +652,89 @@ footer a:hover {
         margin-top: 2px;
         line-height: 1.8;
     }
-}
 
+    /* Résultat*/
+
+    #resultat {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #populaire {
+        width: 30vw;
+        margin: 0;
+        padding: 20px 0 0 0;
+        border-radius: 25px;
+    }
+    
+    .populaires {
+        margin: 0 3vw 0 3vw;
+    }
+    
+    #populaire h1 {
+        margin-left: 3vw;
+    }
+    
+    #populaire h1::after {
+        right: auto;
+        margin-left: 6vw;
+    }
+    
+    .populaires .card {
+        height: 15vh;
+        margin-bottom: 3vw;
+    }
+    
+    .populaires .col-img {
+        width: 15vh;
+        height: 15vh;
+    }
+    
+    .populaires .rating {
+        height: 4vh;
+    }
+
+    /* Hébergement */
+    
+    .hebergement {
+        border-radius: 25px;
+        width: 60vw;
+        padding: 20px 0;
+        background-color: var(--color-gray);
+    }
+
+    .hebergement h1 {
+        margin-left: 3vw;
+    }
+
+    .hebergements {
+        margin: 0 3vw 0 3vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .hebergements .card {
+        height: 20vh;
+        width: 16vw;
+        margin-bottom: 30px;
+    }
+    
+    .hebergements .col-img {
+        width: 100%;
+        height: 12vh;
+    }
+    
+    .hebergements .col-text h4 {
+        height: 2vh;
+    }
+    
+    .hebergements .card-text {
+        height: 2vh;
+    }
+    
+    .afficherPlus {
+        margin-left: 3vw;
+    }
+}
