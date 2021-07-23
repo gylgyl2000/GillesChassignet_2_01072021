@@ -737,4 +737,71 @@ footer a:hover {
     .afficherPlus {
         margin-left: 3vw;
     }
+    
+    /* Activités */
+
+    .activite {
+        padding-top: 5vh;
+    }
+
+    .activites {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .activites .card {
+        width: 33vh;
+    }
+
+    .activites .col-text {
+        margin: 20px 12px 0 12px;
+    }
+
+    .col1, .col2, .col3, .col4  {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col1 .card, .col3 .card {
+        height: 50vh;
+    }
+
+    .col1 .col-img, .col3 .col-img {
+        height: 44vh;
+    }
+
+    .col2 a:nth-child(1) .card {
+        height: 26vh;
+    }
+
+    .col2 a:nth-child(2) .card {
+        height: 19.5vh;
+        margin-top: 2vh;
+    }
+
+    .col2 a:nth-child(2) .card .col-img {
+        height: 13vh;
+    }
+
+    .col4 .card {
+        height: 22.6vh;
+    }
+
+    .col4 .col-img {
+        height: 16vh;
+    }
+    .col4 a:nth-child(2) .card {
+        margin-top: 2vh;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 12vw;
+    }
+    
+    footer div {
+        width: 22vw;
+    }
 }
