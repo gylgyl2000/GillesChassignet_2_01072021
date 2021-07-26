@@ -4,9 +4,6 @@
     --color-blue: #0065FC;
     --color-blue-light: #DEEBFF;
     --color-gray: #F2F2F2;
-    --space: 8px;
-    --container-padding: 20px;
-    --container-width: calc(100vw - var(--container-padding) * 2);
 }
 
 .bleue {
@@ -262,14 +259,15 @@ input[type="checkbox"].check + label {
     margin-bottom: 10px;
 }
 
-input[type="checkbox"].check:hover + label {    
+input[type="checkbox"].check:hover + label {
+    background-color: var(--color-blue-light);
     color: var(--color-blue);
 }
 
-input[type="checkbox"].check:checked + label {
+/* input[type="checkbox"].check:checked + label {
     background-color: var(--color-blue-light);
     border-color: var(--color-blue-light);
-}
+} */
 
 .result-filtres {
     display: flex;
@@ -374,6 +372,14 @@ input[type="checkbox"].check:checked + label {
     height: 2vh;
 }
 
+.card {
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px 0 #ABABAB !important;
+}
+
 /*************************/
 /*       Section         */
 /*    "Hébergements"     */
@@ -448,7 +454,6 @@ input[type="checkbox"].check:checked + label {
     padding-top: 2vh;
 }
 
-
 .activites a:hover {
     color: var(--color-blue);
 }
@@ -515,6 +520,8 @@ footer a:hover {
 
 /***** MEDIA QUERIES *****/
 
+/* Desktop */
+
 @media (min-width: 992px) {
     header {
         padding-bottom: 2vh;
@@ -537,7 +544,7 @@ footer a:hover {
 
     #logo img {
         width: 8vw;
-        padding-left: 5vw;
+        padding-left: 3vw;
     }
 
     #desktop-nav {
@@ -660,6 +667,8 @@ footer a:hover {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
+
+    /* Populaires */
 
     #populaire {
         width: 30vw;
@@ -795,6 +804,9 @@ footer a:hover {
         margin-top: 2vh;
     }
 
+
+    /* footer */
+
     footer {
         flex-direction: row;
         justify-content: space-between;
@@ -803,5 +815,163 @@ footer a:hover {
     
     footer div {
         width: 22vw;
+    }
+}
+
+/* Tablette */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header .container {
+        padding-top: 0;
+    }
+
+    main {
+        padding: 15vh 5vw 0 5vw;
+    }
+
+    .search-input .fa-map-marker-alt {
+        padding: 18px 18px;
+    }
+
+    .submit {
+        width: 50px;
+    }
+
+    .result-filtres {
+        height: 8vh;
+    }
+
+    .fas.fa-info {
+        width: 8px;
+    }
+
+    .result-filtres p {
+        line-height: 2;
+    }
+
+    /* Populaires */
+
+    #populaire {
+        margin: 0 -5vw 0 -7vw;
+    }
+
+    .populaires .card {
+        height: 16vh;
+    }
+
+    .populaires .col-img {
+        width: 27vh;
+        height: 16vh;
+    }
+
+    .populaires .col-text h4 {
+        height: 9vh;
+    }
+    
+    .populaires .card-text {
+        height: 12vh;
+    }
+    
+    .populaires .rating {
+        height: 10vh;
+    }
+
+    .populaires .col-text h4,
+    .hebergements .col-text h4 {
+        font-size: 20px;
+    }
+
+    .populaires .col-text p,
+    .hebergements .col-text p {
+        font-size: 16px;
+    }
+
+    /* H&bergements */
+
+    .hebergements {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .hebergements .card {
+        margin-bottom: 25px;
+        width: 42vw;
+    }
+
+    /* Activités */
+
+    .activites {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .activites .card {
+        width: 33vh;
+    }
+
+    .activites .col-text {
+        margin: 20px 12px 0 12px;
+    }
+
+    .col1, .col2, .col3, .col4  {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col1 .card, .col3 .card {
+        height: 50vh;
+    }
+
+    .col1 .col-img, .col3 .col-img {
+        height: 44vh;
+    }
+
+    .col2 a:nth-child(1) .card {
+        height: 26vh;
+    }
+
+    .col2 a:nth-child(2) .card {
+        height: 21.5vh;
+        margin-top: 0vh;
+    }
+
+    .col2 a:nth-child(2) .card .col-img {
+        height: 15vh;
+    }
+
+    .col4 .card {
+        height: 23.8vh;
+    }
+
+    .col4 .col-img {
+        height: 18vh;
+    }
+    .col4 a:nth-child(2) .card {
+        margin-top: 0vh;
+    }
+
+    /* Footer */
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 5vw;
+        padding-left: 5vw;
+    }
+
+    .aPropos {
+        width: 35vw;
+    }
+
+    .nosHebergements {
+        width: 32vw;
+    }
+
+    .assistance {
+        width: 16vw;
     }
 }
