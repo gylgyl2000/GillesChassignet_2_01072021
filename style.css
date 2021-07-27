@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap');
 
-:root {
+/* :root {
     --color-blue: #0065FC;
     --color-blue-light: #DEEBFF;
     --color-gray: #F2F2F2;
-}
+} */
 
 .bleue {
-    color: var(--color-blue);
+    color: #0065FC;
 }
 
 .grise {
-    color: var(--color-gray);
+    color: #F2F2F2;
 }
 
 body {
@@ -22,12 +22,16 @@ body {
     background-color: white;
 }
 
-h1 {
+#resultat h1 {
+    display: none;
+}
+
+h2 {
     font-size: 24px;
     font-weight: 700;
 }
 
-h1[id]:before {
+h2[id]:before {
     content:'';
     display:block;
     height:18vh;
@@ -35,17 +39,17 @@ h1[id]:before {
     visibility:hidden
 }
 
-h2 {
+h3 {
     font-size: 22px;
     font-weight: 700;
     line-height: 1.1;
 }
 
-h3 { 
+h4 { 
     font-size: 18px;
 }
 
-h4 {
+h5 {
     font-size: 16px;
     line-height: 1.1;
 }
@@ -110,7 +114,7 @@ header .container div {
     margin-bottom: 2vh;
     text-align: right;
     font-weight: 800;
-    color: var(--color-blue);
+    color: #0065FC;
 }
 
 /*************************/
@@ -140,28 +144,13 @@ input[type="radio"].onglet + label {
     transition: all 0.5s ease-in-out;
 }
 
-input[type="radio"].onglet.ongletHeb:hover + label {
-    border-bottom: 3px solid var(--color-blue);
-    font-weight: 600;
-    color: var(--color-blue);
-}
-
-input[type="radio"].onglet.ongletHeb:checked + label {
-    border-bottom: 3px solid var(--color-blue);
-    font-weight: 600;
-    color: var(--color-blue);
-}
-
-input[type="radio"].onglet.ongletAct:hover + label {
-    border-bottom: 3px solid var(--color-blue);
-    font-weight: 600;
-    color: var(--color-blue);
-}
-
+input[type="radio"].onglet.ongletHeb:hover + label,
+input[type="radio"].onglet.ongletHeb:checked + label,
+input[type="radio"].onglet.ongletAct:hover + label,
 input[type="radio"].onglet.ongletAct:checked + label {
-    border-bottom: 3px solid var(--color-blue);
+    border-bottom: 3px solid #0065FC;
     font-weight: 600;
-    color: var(--color-blue);
+    color: #0065FC;
 }
 
 /*************************/
@@ -188,14 +177,14 @@ main {
 .search-input {
     display: flex;
     height: 5vh;
-    border: 1px solid var(--color-gray);
+    border: 1px solid #F2F2F2;
     border-radius: 10px;
 }
 
 .search-input input {
     flex-grow: 1;
     font-weight: 800;
-    margin: 0 -37px 0 29px;
+    padding-left: 20px;
     font-size: 16px;
     color: black;
     border: none;
@@ -203,17 +192,18 @@ main {
 
 .search-input .fa-map-marker-alt {
     padding: 8px 12px;
-    background-color: var(--color-gray);
+    background-color: #F2F2F2;
     border-radius: 8px 0 0 8px;
 }
 
 .submit {
     width: 34px;
-    background-color: var(--color-blue);
+    background-color: #0065FC;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px;
 }
 
 /*************************/
@@ -230,12 +220,12 @@ main {
 }
 
 .filtres .fas {
-    color: var(--color-blue);
+    color: #0065FC;
     border-radius: 25px;
-    background-color: var(--color-blue-light);
+    background-color: #DEEBFF;
     padding: 12px;
     margin: -10px 12px -10px -10px;
-    border: 3px solid var(--color-blue-light);
+    border: 3px solid #DEEBFF;
     width: 14px;
     height: 14px;
     text-align: center;
@@ -253,20 +243,20 @@ input[type="checkbox"].check + label {
     font-weight: 700;
     padding: 7px 14px 7px 7px;
     border-radius: 25px;
-    border: 3px solid var(--color-gray);
+    border: 3px solid #F2F2F2;
     background-color: white;
     margin-right: 10px;
     margin-bottom: 10px;
 }
 
 input[type="checkbox"].check:hover + label {
-    background-color: var(--color-blue-light);
-    color: var(--color-blue);
+    background-color: #DEEBFF;
+    color: #0065FC;
 }
 
 /* input[type="checkbox"].check:checked + label {
-    background-color: var(--color-blue-light);
-    border-color: var(--color-blue-light);
+    background-color: #DEEBFF;
+    border-color: #DEEBFF;
 } */
 
 .result-filtres {
@@ -282,9 +272,9 @@ input[type="checkbox"].check:hover + label {
 
 .fas.fa-info {
     width: 10px;
-    color: var(--color-blue);
+    color: #0065FC;
     padding: 4px 8px 9px 8px;
-    border: 2px solid var(--color-gray);
+    border: 2px solid #F2F2F2;
     border-radius: 25px;
     height: 10px;
     text-align: center;
@@ -300,7 +290,7 @@ input[type="checkbox"].check:hover + label {
 #populaire {
     margin: 0 -4vw 0 -7vw;
     padding: 20px 0;
-    background-color: var(--color-gray);
+    background-color: #F2F2F2;
 }
 
 .populaires {
@@ -308,14 +298,14 @@ input[type="checkbox"].check:hover + label {
 }
 
 .populaires a:hover {
-    color: var(--color-blue);
+    color: #0065FC;
 }
 
-#populaire h1 {
+#populaire h2 {
     margin-left: 10vw;
 }
 
-#populaire h1::after {
+#populaire h2::after {
     content:url(img/chart-line-solid.svg);
     position: absolute;
     min-width: 20px;
@@ -354,7 +344,7 @@ input[type="checkbox"].check:hover + label {
     margin: 12px 12px 0 12px;
 }
 
-.populaires .col-text h4 {
+.populaires .col-text h5 {
     margin: 0px;
     height: 6vh;
 }
@@ -386,7 +376,7 @@ input[type="checkbox"].check:hover + label {
 /*************************/
 
 .hebergements a:hover {
-    color: var(--color-blue);
+    color: #0065FC;
 }
 
 .hebergements .card {
@@ -419,7 +409,7 @@ input[type="checkbox"].check:hover + label {
     margin: 12px 12px 0 12px;
 }
 
-.hebergements .col-text h4 {
+.hebergements .col-text h5 {
     margin: 0px;
     height: 3vh;
 }
@@ -437,12 +427,12 @@ input[type="checkbox"].check:hover + label {
     height: 2vh;
 }
 
-.afficherPlus h3 {
+.afficherPlus h4 {
     padding: 20px 0;
 }
 
 .afficherPlus a:hover {
-    color: var(--color-blue);
+    color: #0065FC;
 }
 
 /*************************/
@@ -455,7 +445,7 @@ input[type="checkbox"].check:hover + label {
 }
 
 .activites a:hover {
-    color: var(--color-blue);
+    color: #0065FC;
 }
 
 .activites .card {
@@ -487,7 +477,7 @@ input[type="checkbox"].check:hover + label {
     margin: 12px 12px 0 12px;
 }
 
-.activites .col-text h4 {
+.activites .col-text h5 {
     margin: 0px;
     height: 3vh;
 }
@@ -497,7 +487,7 @@ input[type="checkbox"].check:hover + label {
 /*************************/
 
 footer {
-    background-color: var(--color-gray);
+    background-color: #F2F2F2;
     margin-top: 4vh;
     padding: 3vh 8vw 6vh 8vw;
     display: flex;
@@ -509,12 +499,12 @@ footer div {
     flex-direction: column;
 }
 
-footer h3 {
+footer h4 {
     margin-bottom: 10px;
 }
 
 footer a:hover {
-    color: var(--color-blue);
+    color: #0065FC;
     font-weight: bold;
 }
 
@@ -566,28 +556,13 @@ footer a:hover {
         transition: all 0.5s ease-in-out;
     }
     
-    input[type="radio"].onglet-a.ongletHeb-a:hover + label {
-        border-top: 3px solid var(--color-blue);
-        font-weight: 600;
-        color: var(--color-blue);
-    }
-
-    input[type="radio"].onglet-a.ongletHeb-a:checked + label {
-        border-top: 3px solid var(--color-blue);
-        font-weight: 600;
-        color: var(--color-blue);
-    }
-
-    input[type="radio"].onglet-a.ongletAct-a:hover + label {
-        border-top: 3px solid var(--color-blue);
-        font-weight: 600;
-        color: var(--color-blue);
-    }
-
+    input[type="radio"].onglet-a.ongletHeb-a:hover + label,
+    input[type="radio"].onglet-a.ongletHeb-a:checked + label,
+    input[type="radio"].onglet-a.ongletAct-a:hover + label,
     input[type="radio"].onglet-a.ongletAct-a:checked + label {
-        border-top: 3px solid var(--color-blue);
+        border-top: 3px solid #0065FC;
         font-weight: 600;
-        color: var(--color-blue);
+        color: #0065FC;
     }
 
     nav label {
@@ -634,7 +609,7 @@ footer a:hover {
 
     .search-input .fa-map-marker-alt {
         padding: 14px 16px 0 16px;
-        background-color: var(--color-gray);
+        background-color: #F2F2F2;
         border-radius: 10px 0 0 10px;
     }
 
@@ -681,11 +656,11 @@ footer a:hover {
         margin: 0 3vw 0 3vw;
     }
     
-    #populaire h1 {
+    #populaire h2 {
         margin-left: 3vw;
     }
     
-    #populaire h1::after {
+    #populaire h2::after {
         right: auto;
         margin-left: 6vw;
     }
@@ -710,10 +685,10 @@ footer a:hover {
         border-radius: 25px;
         width: 60vw;
         padding: 20px 0;
-        background-color: var(--color-gray);
+        background-color: #F2F2F2;
     }
 
-    .hebergement h1 {
+    .hebergement h2 {
         margin-left: 3vw;
     }
 
@@ -735,7 +710,7 @@ footer a:hover {
         height: 12vh;
     }
     
-    .hebergements .col-text h4 {
+    .hebergements .col-text h5 {
         height: 2vh;
     }
     
@@ -864,7 +839,7 @@ footer a:hover {
         height: 16vh;
     }
 
-    .populaires .col-text h4 {
+    .populaires .col-text h5 {
         height: 9vh;
     }
     
@@ -876,8 +851,8 @@ footer a:hover {
         height: 10vh;
     }
 
-    .populaires .col-text h4,
-    .hebergements .col-text h4 {
+    .populaires .col-text h5,
+    .hebergements .col-text h5 {
         font-size: 20px;
     }
 
